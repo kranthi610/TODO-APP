@@ -87,7 +87,7 @@
     $to = new SendGrid\Email($name,$email);
     $content = new SendGrid\Content("text/html","Hi $name,<br>Please verify your TODO App management account.".$email_link);
     $mail = new SendGrid\Mail($from, $subject, $to, $content);
-    $apiKey = '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';
+    $apiKey = '';
     $sg = new \SendGrid($apiKey);
     $response = $sg->client->mail()->send()->post($mail);
   }
